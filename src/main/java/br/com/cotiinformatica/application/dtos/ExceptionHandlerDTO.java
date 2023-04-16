@@ -1,5 +1,9 @@
 package br.com.cotiinformatica.application.dtos;
 
+import java.util.List;
+
+import org.springframework.http.HttpStatus;
+
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -13,11 +17,9 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
-public class AutenticarResponseDTO {
+public class ExceptionHandlerDTO {
 
-	private String mensagem;
-	private String id;
-	private String nome;
-	private String email;
-	private String accessToken;
+	private HttpStatus status;
+	private List<String> errors;
+	
 }
